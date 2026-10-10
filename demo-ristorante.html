@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Osteria del Gelso — Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f0;--ink:#2a231d;--muted:#75695e;--card:#fff;--line:#eaded0;--acc:#b5532e;--olive:#5c6641;--dark:#2a231d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17130f;--ink:#f3ebdf;--muted:#a89c8d;--card:#201a15;--line:#33291f;--dark:#0e0b08}}
+:root[data-theme="dark"]{--bg:#17130f;--ink:#f3ebdf;--muted:#a89c8d;--card:#201a15;--line:#33291f;--dark:#0e0b08}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1;font-weight:600}
+.wrap{max-width:1040px;margin:auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font:700 22px 'Cormorant Garamond',serif}
+.brand svg{width:46px;height:46px}
+nav{display:flex;gap:26px;align-items:center;font-size:14px}
+nav a{color:var(--ink);text-decoration:none}
+.btn{display:inline-block;background:var(--acc);color:#fff!important;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14px}
+.btn.o{background:none;color:var(--ink)!important;border:1px solid var(--ink)}
+.hero{padding:80px 0 70px;text-align:center}
+.eyebrow{color:var(--olive);font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(42px,8vw,76px);margin-bottom:22px}
+h1 em{color:var(--acc)}
+.hero p{max-width:540px;margin:0 auto 30px;color:var(--muted)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ph{background:linear-gradient(135deg,#e5d3bb,#c9ad88);border-radius:14px;display:flex;align-items:center;justify-content:center;color:rgba(60,40,20,.4);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.strip{display:grid;gap:14px;grid-template-columns:2fr 1fr 1fr;margin-bottom:10px}
+.strip .ph{height:260px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(32px,5vw,46px);margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:38px;max-width:520px}
+.menu{display:grid;gap:44px 64px;grid-template-columns:1fr 1fr}
+.menu h3{font-size:26px;color:var(--acc);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.dish{display:flex;justify-content:space-between;gap:14px;padding:12px 0}
+.dish b{font-weight:600;display:block}.dish small{color:var(--muted)}
+.dish span{font:700 19px 'Cormorant Garamond',serif;white-space:nowrap}
+.about{display:grid;gap:48px;grid-template-columns:1fr 1fr;align-items:center}
+.about .ph{aspect-ratio:4/3}
+.about p{color:var(--muted);margin-bottom:14px}
+.info{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:14px}
+.card h3{font-size:24px;margin-bottom:10px}.card p{color:var(--muted)}
+.band{background:var(--dark);color:#f3ebdf;text-align:center;padding:80px 0;border:0}
+.band h2{margin-bottom:12px}.band p{color:#b9ad9d;margin-bottom:26px}
+footer{padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:760px){nav a:not(.btn){display:none}.menu,.about,.info{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.strip .ph:first-child{grid-column:span 2}.strip .ph{height:160px}.hero{padding-top:48px}.brand span{font-size:19px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="brand">
+<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#5c6641"/><circle cx="50" cy="50" r="41" fill="none" stroke="#fbf7f0" stroke-width="1.2"/><path d="M50 74V46M50 46c-10-2-16-10-15-20 10 0 16 8 15 20zM50 54c9-1 15-8 15-16-9 0-14 6-15 16z" fill="none" stroke="#fbf7f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="64" r="3.6" fill="#e9a27f"/><circle cx="60" cy="66" r="3.6" fill="#e9a27f"/></svg>
+<span>Osteria del Gelso</span></div>
+<nav><a href="#menu">Menù</a><a href="#storia">La casa</a><a href="#info">Info</a><a class="btn" href="#prenota">Prenota</a></nav>
+</div></header>
+
+<main>
+<div class="wrap hero">
+<div class="eyebrow">Cucina di casa · Dal 1994</div>
+<h1>Il piacere di <em>sedersi</em><br>a tavola.</h1>
+<p>Piatti della tradizione, ingredienti scelti ogni mattina e un'accoglienza che sa di famiglia. Vieni a pranzo o a cena, senza fretta.</p>
+<div class="cta"><a class="btn" href="#prenota">Prenota un tavolo</a><a class="btn o" href="#menu">Guarda il menù</a></div>
+</div>
+<div class="wrap"><div class="strip"><div class="ph">Sala</div><div class="ph">Piatto</div><div class="ph">Dolce</div></div></div>
+
+<section id="menu"><div class="wrap">
+<h2>Il menù</h2>
+<p class="sub">Cambia con le stagioni. Qui trovi una selezione dei nostri piatti.</p>
+<div class="menu">
+<div><h3>Antipasti</h3>
+<div class="dish"><div><b>Tagliere della casa</b><small>Salumi, formaggi e confetture</small></div><span>€14</span></div>
+<div class="dish"><div><b>Parmigiana di melanzane</b><small>Come la faceva la nonna</small></div><span>€9</span></div>
+<div class="dish"><div><b>Bruschette miste</b><small>Pomodoro, olive, ricotta</small></div><span>€7</span></div></div>
+<div><h3>Primi</h3>
+<div class="dish"><div><b>Paccheri al ragù</b><small>Cottura lenta di otto ore</small></div><span>€13</span></div>
+<div class="dish"><div><b>Tagliatelle ai funghi</b><small>Fatte a mano ogni giorno</small></div><span>€14</span></div>
+<div class="dish"><div><b>Risotto di stagione</b><small>Chiedi in sala</small></div><span>€13</span></div></div>
+<div><h3>Secondi</h3>
+<div class="dish"><div><b>Tagliata di manzo</b><small>Rucola e scaglie di grana</small></div><span>€20</span></div>
+<div class="dish"><div><b>Pesce del giorno</b><small>Al forno con patate</small></div><span>€22</span></div>
+<div class="dish"><div><b>Pollo alla cacciatora</b><small>Con contorno</small></div><span>€15</span></div></div>
+<div><h3>Dolci</h3>
+<div class="dish"><div><b>Tiramisù</b><small>Ricetta di casa</small></div><span>€6</span></div>
+<div class="dish"><div><b>Panna cotta</b><small>Ai frutti di bosco</small></div><span>€6</span></div>
+<div class="dish"><div><b>Sorbetto al limone</b><small>Artigianale</small></div><span>€5</span></div></div>
+</div>
+</div></section>
+
+<section id="storia"><div class="wrap about">
+<div class="ph">Foto della cucina</div>
+<div>
+<div class="eyebrow">La nostra storia</div>
+<h2>Una cucina che parla di casa</h2>
+<p>L'Osteria del Gelso nasce da una passione di famiglia: fare da mangiare bene, con le cose giuste e il tempo che serve.</p>
+<p>Ogni piatto parte da ingredienti freschi e da ricette tramandate. Il resto lo fa la tavola, con le persone sedute intorno.</p>
+</div>
+</div></section>
+
+<section id="info"><div class="wrap">
+<h2>Info utili</h2><p class="sub">Tutto quello che serve per organizzare la serata.</p>
+<div class="info">
+<div class="card"><h3>Orari</h3><p>Mar – Dom<br>12:00 – 15:00<br>19:00 – 23:00<br>Lunedì chiuso</p></div>
+<div class="card"><h3>Dove</h3><p>Via Esempio 24<br>00000 Città (PR)<br>Parcheggio vicino</p></div>
+<div class="card"><h3>Contatti</h3><p>Tel. 000 000 0000<br>WhatsApp 000 000 0000<br>info@esempio.it</p></div>
+</div>
+</div></section>
+
+<section class="band" id="prenota"><div class="wrap">
+<h2>Prenota il tuo tavolo</h2>
+<p>Per cene, pranzi di famiglia e feste. Chiamaci o scrivici su WhatsApp.</p>
+<a class="btn" href="tel:0000000000">Chiama ora</a>
+</div></section>
+</main>
+<footer><div class="wrap">Demo di esempio · Nome, logo e dati di fantasia · Realizzata da Daniele</div></footer>
+</body>
+</html>
